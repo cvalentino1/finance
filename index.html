@@ -5,46 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="APEX Finance">
+<meta name="apple-mobile-web-app-title" content="Serca/40">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#000000">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="icons/icon-144.png">
-<meta name="description" content="Enterprise-grade financial calculator suite">
-<title>APEX Financial Command Center</title>
-<!-- PWA Manifest -->
+<meta name="description" content="Serca/40 Financial - Quantum Intelligence Suite">
+<title>Serca/40 Financial</title>
 <link rel="manifest" href="manifest.json">
-<!-- iOS Icons -->
 <link rel="apple-touch-icon" href="icons/icon-152.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
-<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
-<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-96.png">
-<!-- iOS Splash Screens -->
-<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/png" href="icons/icon-96.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--bg2:#0a0a0a;--bg3:#111;--card:#161616;--input:#0d0d0d;--border:#2a2a2a;--gold:#d4af37;--gold-glow:rgba(212,175,55,0.4);--gold-grad:linear-gradient(135deg,#d4af37,#f4d03f,#d4af37);--text:#f5f5f5;--text2:#a0a0a0;--muted:#666;--success:#00c853;--danger:#ff1744;--safe-top:env(safe-area-inset-top);--safe-bottom:env(safe-area-inset-bottom)}
+:root{--bg:#000;--bg2:#0a0a0a;--bg3:#111;--card:#161616;--input:#0d0d0d;--border:#2a2a2a;--gold:#d4af37;--gold-glow:rgba(212,175,55,0.4);--gold-grad:linear-gradient(135deg,#d4af37,#f4d03f,#d4af37);--text:#f5f5f5;--text2:#a0a0a0;--muted:#666;--success:#00c853;--danger:#ff1744;--cyan:#00d4ff;--safe-top:env(safe-area-inset-top);--safe-bottom:env(safe-area-inset-bottom)}
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{height:100%;overflow:hidden}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);height:100%;overflow:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 20%,rgba(212,175,55,0.03),transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(212,175,55,0.02),transparent 50%);pointer-events:none;z-index:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 20%,rgba(212,175,55,0.03),transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(0,212,255,0.02),transparent 50%);pointer-events:none;z-index:0}
 .app{display:flex;flex-direction:column;height:100%;max-width:1700px;margin:0 auto;padding:calc(1rem + var(--safe-top)) 1rem calc(1rem + var(--safe-bottom));position:relative;z-index:1}
 @media(min-width:768px){.app{padding:1.5rem 2rem}}
 .header{display:flex;justify-content:space-between;align-items:center;padding-bottom:1rem;border-bottom:1px solid var(--border);margin-bottom:1rem;flex-shrink:0}
 .logo{display:flex;align-items:center;gap:.75rem}
-.logo-icon{width:44px;height:44px;background:var(--gold-grad);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:#000;box-shadow:0 4px 20px var(--gold-glow)}
-.logo-text{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:600;background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.logo-sub{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.15em}
+.logo-icon{width:44px;height:44px;background:var(--gold-grad);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.9rem;color:#000;box-shadow:0 4px 20px var(--gold-glow)}
+.logo-icon .zero{color:var(--cyan)}
+.logo-text{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600}
+.logo-text .serca{background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo-text .slash{color:var(--muted);font-weight:400}
+.logo-text .forty{color:var(--gold)}
+.logo-text .zero{color:var(--cyan)}
+.logo-sub{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.25em;margin-top:2px}
 .status{display:none}
 @media(min-width:768px){.status{display:flex;align-items:center;gap:2rem}}
 .status-dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 10px var(--success);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 .datetime{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--gold)}
-.nav{display:flex;gap:.25rem;background:var(--bg3);padding:5px;border-radius:10px;border:1px solid var(--border);margin-bottom:1rem;flex-shrink:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-wrap{flex-shrink:0;margin-bottom:1rem}
+.nav{display:flex;gap:.25rem;background:var(--bg3);padding:5px;border-radius:10px;border:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
-.nav-tab{padding:.6rem 1rem;border:none;background:0;color:var(--text2);font-family:inherit;font-size:.75rem;font-weight:500;border-radius:6px;cursor:pointer;transition:.3s;white-space:nowrap;flex-shrink:0}
+.nav-tab{padding:.6rem .9rem;border:none;background:transparent;color:var(--text2);font-family:inherit;font-size:.7rem;font-weight:500;border-radius:6px;cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0}
 .nav-tab:hover{color:var(--text);background:var(--card)}
 .nav-tab.active{background:var(--gold-grad);color:#000;font-weight:600;box-shadow:0 2px 10px var(--gold-glow)}
 .main{display:grid;grid-template-columns:1fr;gap:1rem;flex:1;overflow:hidden}
@@ -53,10 +49,10 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .panel{display:none}
 .panel.active{display:block;animation:fadeIn .3s}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.panel-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+.panel-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
 .panel-icon{width:32px;height:32px;background:var(--card);border:1px solid rgba(212,175,55,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem}
-.panel-desc{color:var(--text2);font-size:.85rem;margin-bottom:1.25rem}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1rem;transition:.3s}
+.panel-desc{color:var(--text2);font-size:.8rem;margin-bottom:1.25rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1rem}
 .card:hover{border-color:rgba(212,175,55,.3)}
 .card.premium{background:linear-gradient(135deg,rgba(212,175,55,.05),transparent 50%);border-color:rgba(212,175,55,.3);position:relative}
 .card.premium::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-grad);border-radius:14px 14px 0 0}
@@ -66,40 +62,40 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 @media(min-width:768px){.form-grid{grid-template-columns:repeat(4,1fr)}}
 .form-group{display:flex;flex-direction:column;gap:.4rem}
 .form-label{font-size:.65rem;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.02em}
-.form-input{background:var(--input);border:1px solid var(--border);border-radius:8px;padding:.75rem .875rem;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.875rem;transition:.2s;width:100%}
+.form-input{background:var(--input);border:1px solid var(--border);border-radius:8px;padding:.75rem .875rem;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.875rem;width:100%}
 .form-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-glow)}
+select.form-input{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .875rem center;padding-right:2.5rem}
 .input-wrap{position:relative}
-.input-prefix{position:absolute;left:.875rem;top:50%;transform:translateY(-50%);color:var(--gold);font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.875rem}
+.input-prefix{position:absolute;left:.875rem;top:50%;transform:translateY(-50%);color:var(--gold);font-family:'JetBrains Mono',monospace;font-weight:600}
 .input-suffix{position:absolute;right:.875rem;top:50%;transform:translateY(-50%);color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.75rem}
 .has-prefix{padding-left:1.75rem}
 .has-suffix{padding-right:2.5rem}
-.cf-wrap{max-height:200px;overflow-y:auto;border:1px solid var(--border);border-radius:10px;-webkit-overflow-scrolling:touch}
+.cf-wrap{max-height:200px;overflow-y:auto;border:1px solid var(--border);border-radius:10px}
 .cf-table{width:100%;border-collapse:collapse}
 .cf-table th{position:sticky;top:0;background:var(--bg3);padding:.6rem;text-align:left;font-size:.6rem;font-weight:600;color:var(--gold);text-transform:uppercase;border-bottom:1px solid var(--border)}
 .cf-table td{padding:.4rem;border-bottom:1px solid var(--border)}
-.cf-period{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);width:60px}
+.cf-period{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);width:50px}
 .cf-input{background:var(--input);border:1px solid var(--border);border-radius:6px;padding:.4rem;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.8rem;width:100%}
 .cf-input:focus{outline:none;border-color:var(--gold)}
-.btn-rm{width:26px;height:26px;border:1px solid var(--border);background:0;border-radius:6px;color:var(--muted);cursor:pointer;font-size:.9rem}
-.btn-rm:hover,.btn-rm:active{border-color:var(--danger);color:var(--danger);background:rgba(255,23,68,.1)}
-.btn-add{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.6rem;border:1px dashed var(--border);background:0;border-radius:8px;color:var(--text2);font-family:inherit;font-size:.75rem;cursor:pointer;width:100%;margin-top:.75rem}
-.btn-add:hover,.btn-add:active{border-color:var(--gold);color:var(--gold)}
+.btn-rm{width:26px;height:26px;border:1px solid var(--border);background:transparent;border-radius:6px;color:var(--muted);cursor:pointer;font-size:.9rem}
+.btn-rm:hover{border-color:var(--danger);color:var(--danger);background:rgba(255,23,68,.1)}
+.btn-add{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.6rem;border:1px dashed var(--border);background:transparent;border-radius:8px;color:var(--text2);font-family:inherit;font-size:.75rem;cursor:pointer;width:100%;margin-top:.75rem}
+.btn-add:hover{border-color:var(--gold);color:var(--gold)}
 .btns{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
-.btn-primary{background:var(--gold-grad);border:none;border-radius:10px;padding:.875rem 2rem;color:#000;font-family:inherit;font-size:.875rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px var(--gold-glow);transition:.3s;flex:1;min-width:150px}
-.btn-primary:hover,.btn-primary:active{transform:translateY(-2px);box-shadow:0 6px 25px var(--gold-glow)}
+.btn-primary{background:var(--gold-grad);border:none;border-radius:10px;padding:.875rem 2rem;color:#000;font-family:inherit;font-size:.875rem;font-weight:600;cursor:pointer;box-shadow:0 4px 15px var(--gold-glow);flex:1;min-width:140px}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 25px var(--gold-glow)}
 .btn-secondary{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:.875rem 1.5rem;color:var(--text);font-family:inherit;font-size:.875rem;font-weight:500;cursor:pointer}
-.btn-secondary:hover,.btn-secondary:active{border-color:var(--gold)}
-.results-panel{overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+.btn-secondary:hover{border-color:var(--gold)}
+.results-panel{overflow-y:auto;display:none}
 @media(min-width:1200px){.results-panel{display:block}}
 .results-panel.mobile-show{display:block;position:fixed;inset:0;z-index:100;background:var(--bg);padding:calc(1rem + var(--safe-top)) 1rem calc(1rem + var(--safe-bottom));overflow-y:auto}
 .result-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1rem}
-.result-card.primary{background:linear-gradient(135deg,rgba(212,175,55,.1),rgba(212,175,55,.02));border-color:var(--gold);position:relative}
-.result-card.primary::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-grad);border-radius:14px 14px 0 0}
 .result-hero{text-align:center;padding:.75rem 0}
 .result-hero-label{font-size:.65rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem}
 .result-hero-value{font-family:'JetBrains Mono',monospace;font-size:2rem;font-weight:600;background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .result-hero-value.pos{background:linear-gradient(135deg,#00c853,#69f0ae);-webkit-background-clip:text}
 .result-hero-value.neg{background:linear-gradient(135deg,#ff1744,#ff8a80);-webkit-background-clip:text}
+.result-hero-sub{font-size:.75rem;color:var(--text2);margin-top:.25rem}
 .results-divider{height:1px;background:var(--border);margin:.75rem 0}
 .results-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
 .result-item{background:var(--bg3);padding:.75rem;border-radius:8px;border:1px solid var(--border)}
@@ -112,6 +108,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .verdict{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem .875rem;border-radius:20px;font-size:.7rem;font-weight:600;text-transform:uppercase}
 .verdict.pos{background:rgba(0,200,83,.15);color:var(--success);border:1px solid rgba(0,200,83,.3)}
 .verdict.neg{background:rgba(255,23,68,.15);color:var(--danger);border:1px solid rgba(255,23,68,.3)}
+.verdict.neutral{background:rgba(212,175,55,.15);color:var(--gold);border:1px solid rgba(212,175,55,.3)}
 .empty-state{text-align:center;padding:2rem 1rem}
 .empty-icon{width:60px;height:60px;background:var(--bg3);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;font-size:1.5rem}
 .empty-title{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:.4rem}
@@ -124,7 +121,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .chart-area{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:.75rem;margin-top:.75rem}
 .chart-title{font-size:.7rem;font-weight:600;color:var(--text2);margin-bottom:.75rem}
 .bar-chart{display:flex;align-items:flex-end;gap:3px;height:80px}
-.bar{flex:1;background:var(--gold-grad);border-radius:2px 2px 0 0;min-height:4px;transition:.3s}
+.bar{flex:1;background:var(--gold-grad);border-radius:2px 2px 0 0;min-height:4px}
 .bar.neg{background:linear-gradient(180deg,#ff1744,#d50000)}
 .sensitivity{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:.75rem}
 .sensitivity table{width:100%;border-collapse:collapse;font-size:.65rem}
@@ -150,166 +147,231 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 <body>
 <div class="app">
 <header class="header">
-<div class="logo"><div class="logo-icon">A</div><div><div class="logo-text">APEX Finance</div><div class="logo-sub">Command Center</div></div></div>
+<div class="logo">
+<div class="logo-icon">S4<span class="zero">0</span></div>
+<div>
+<div class="logo-text"><span class="serca">Serca</span><span class="slash">/</span><span class="forty">4</span><span class="zero">0</span></div>
+<div class="logo-sub">Quantum Intelligence Suite</div>
+</div>
+</div>
 <div class="status"><div style="display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--text2)"><span class="status-dot"></span>Online</div><div class="datetime" id="datetime"></div></div>
 </header>
-<nav class="nav">
+<nav class="nav-wrap">
+<div class="nav" id="mainNav">
 <button class="nav-tab active" data-tab="capex">NPV/IRR</button>
+<button class="nav-tab" data-tab="fvpv">FV/PV</button>
 <button class="nav-tab" data-tab="dcf">DCF</button>
+<button class="nav-tab" data-tab="stock">Stocks</button>
 <button class="nav-tab" data-tab="debt">Debt</button>
 <button class="nav-tab" data-tab="wc">Working Cap</button>
 <button class="nav-tab" data-tab="profit">Profit</button>
 <button class="nav-tab" data-tab="growth">Growth</button>
 <button class="nav-tab" data-tab="scenario">Scenarios</button>
 <button class="nav-tab" data-tab="ratios">Ratios</button>
+</div>
 </nav>
 <div class="main">
-<div class="panels">
-<!-- CAPITAL BUDGETING -->
+<div class="panels" id="panelsContainer">
+<!-- NPV/IRR -->
 <div class="panel active" id="capex">
 <div class="panel-title"><span class="panel-icon">📊</span>Capital Budgeting</div>
-<p class="panel-desc">NPV, IRR, MIRR, and Payback analysis for investment decisions.</p>
+<p class="panel-desc">NPV, IRR, MIRR, and Payback analysis.</p>
 <div class="card premium"><div class="card-title">Investment Parameters</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Initial Investment</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="capex-init" value="5,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Discount Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="capex-wacc" value="12" step="0.5" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Reinvest Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="capex-reinv" value="10" step="0.5" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Salvage Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="capex-salv" value="500,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
+<div class="form-group"><label class="form-label">Initial Investment</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="capex-init" value="5,000,000" inputmode="numeric"></div></div>
+<div class="form-group"><label class="form-label">Discount Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="capex-wacc" value="12" step="0.5"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Reinvest Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="capex-reinv" value="10" step="0.5"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Salvage Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="capex-salv" value="500,000" inputmode="numeric"></div></div>
 </div></div>
-<div class="card"><div class="card-title">Projected Cash Flows</div>
-<div class="cf-wrap">
-<table class="cf-table"><thead><tr><th>Year</th><th>Revenue</th><th>Costs</th><th>Net CF</th><th></th></tr></thead>
+<div class="card"><div class="card-title">Cash Flows</div>
+<div class="cf-wrap"><table class="cf-table"><thead><tr><th>Yr</th><th>Revenue</th><th>Costs</th><th>Net</th><th></th></tr></thead>
 <tbody id="capex-cf">
-<tr><td class="cf-period">1</td><td><input type="text" class="cf-input cf-rev" value="2,500,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><input type="text" class="cf-input cf-cost" value="1,200,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><span class="net-cf">$1,300,000</span></td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
-<tr><td class="cf-period">2</td><td><input type="text" class="cf-input cf-rev" value="3,200,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><input type="text" class="cf-input cf-cost" value="1,400,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><span class="net-cf">$1,800,000</span></td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
-<tr><td class="cf-period">3</td><td><input type="text" class="cf-input cf-rev" value="3,800,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><input type="text" class="cf-input cf-cost" value="1,600,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><span class="net-cf">$2,200,000</span></td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
-<tr><td class="cf-period">4</td><td><input type="text" class="cf-input cf-rev" value="4,200,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><input type="text" class="cf-input cf-cost" value="1,800,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><span class="net-cf">$2,400,000</span></td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
-<tr><td class="cf-period">5</td><td><input type="text" class="cf-input cf-rev" value="4,500,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><input type="text" class="cf-input cf-cost" value="2,000,000" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><span class="net-cf">$2,500,000</span></td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
+<tr><td class="cf-period">1</td><td><input type="text" class="cf-input cf-rev" value="2,500,000"></td><td><input type="text" class="cf-input cf-cost" value="1,200,000"></td><td class="net-cf">$1,300,000</td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
+<tr><td class="cf-period">2</td><td><input type="text" class="cf-input cf-rev" value="3,200,000"></td><td><input type="text" class="cf-input cf-cost" value="1,400,000"></td><td class="net-cf">$1,800,000</td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
+<tr><td class="cf-period">3</td><td><input type="text" class="cf-input cf-rev" value="3,800,000"></td><td><input type="text" class="cf-input cf-cost" value="1,600,000"></td><td class="net-cf">$2,200,000</td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
+<tr><td class="cf-period">4</td><td><input type="text" class="cf-input cf-rev" value="4,200,000"></td><td><input type="text" class="cf-input cf-cost" value="1,800,000"></td><td class="net-cf">$2,400,000</td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
+<tr><td class="cf-period">5</td><td><input type="text" class="cf-input cf-rev" value="4,500,000"></td><td><input type="text" class="cf-input cf-cost" value="2,000,000"></td><td class="net-cf">$2,500,000</td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td></tr>
 </tbody></table></div>
-<button class="btn-add" onclick="addRow()">+ Add Year</button>
-</div>
+<button class="btn-add" onclick="addRow()">+ Add Year</button></div>
 <div class="btns"><button class="btn-primary" onclick="calcCapex()">Analyze</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
+<!-- FV/PV -->
+<div class="panel" id="fvpv">
+<div class="panel-title"><span class="panel-icon">⏱️</span>Time Value of Money</div>
+<p class="panel-desc">Future Value and Present Value calculations.</p>
+<div class="card premium"><div class="card-title">Future Value Calculator</div>
+<div class="form-grid">
+<div class="form-group"><label class="form-label">Present Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="fv-pv" value="100,000"></div></div>
+<div class="form-group"><label class="form-label">Interest Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="fv-rate" value="8" step="0.25"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Years</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="fv-years" value="10"><span class="input-suffix">yrs</span></div></div>
+<div class="form-group"><label class="form-label">Compounding</label><select class="form-input" id="fv-compound"><option value="1">Annual</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option><option value="365">Daily</option></select></div>
+<div class="form-group"><label class="form-label">Monthly Contribution</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="fv-pmt" value="1,000"></div></div>
+</div></div>
+<div class="card"><div class="card-title">Present Value Calculator</div>
+<div class="form-grid">
+<div class="form-group"><label class="form-label">Future Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="pv-fv" value="1,000,000"></div></div>
+<div class="form-group"><label class="form-label">Discount Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="pv-rate" value="7" step="0.25"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Years</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="pv-years" value="20"><span class="input-suffix">yrs</span></div></div>
+<div class="form-group"><label class="form-label">Compounding</label><select class="form-input" id="pv-compound"><option value="1">Annual</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option></select></div>
+</div></div>
+<div class="btns"><button class="btn-primary" onclick="calcFV()">Calculate FV</button><button class="btn-primary" onclick="calcPV()">Calculate PV</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
+</div>
+
 <!-- DCF -->
 <div class="panel" id="dcf">
 <div class="panel-title"><span class="panel-icon">💎</span>DCF Valuation</div>
-<p class="panel-desc">Discounted Cash Flow analysis with terminal value.</p>
+<p class="panel-desc">Discounted Cash Flow analysis.</p>
 <div class="card premium"><div class="card-title">Valuation Inputs</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Current FCF</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="dcf-fcf" value="10,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">WACC</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-wacc" value="10" step=".25" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Terminal Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-tg" value="2.5" step=".25" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Years</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-yrs" value="5" inputmode="numeric"><span class="input-suffix">yrs</span></div></div>
-<div class="form-group"><label class="form-label">Shares Out</label><div class="input-wrap"><input type="text" class="form-input" id="dcf-shares" value="50,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Net Debt</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="dcf-debt" value="15,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Yr 1-3 Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-g1" value="15" step=".5" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Yr 4-5 Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-g2" value="8" step=".5" inputmode="decimal"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Current FCF</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="dcf-fcf" value="10,000,000"></div></div>
+<div class="form-group"><label class="form-label">WACC</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-wacc" value="10" step=".25"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Terminal Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-tg" value="2.5" step=".25"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Years</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-yrs" value="5"><span class="input-suffix">yrs</span></div></div>
+<div class="form-group"><label class="form-label">Shares Out</label><div class="input-wrap"><input type="text" class="form-input" id="dcf-shares" value="50,000,000"></div></div>
+<div class="form-group"><label class="form-label">Net Debt</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="dcf-debt" value="15,000,000"></div></div>
+<div class="form-group"><label class="form-label">Yr 1-3 Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-g1" value="15" step=".5"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Yr 4-5 Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="dcf-g2" value="8" step=".5"><span class="input-suffix">%</span></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcDCF()">Calculate</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
+<!-- STOCKS -->
+<div class="panel" id="stock">
+<div class="panel-title"><span class="panel-icon">📈</span>Stock Analysis</div>
+<p class="panel-desc">Valuation metrics and position sizing.</p>
+<div class="card premium"><div class="card-title">Dividend Discount Model</div>
+<div class="form-grid">
+<div class="form-group"><label class="form-label">Current Dividend</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="ddm-div" value="2.50"></div></div>
+<div class="form-group"><label class="form-label">Dividend Growth</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="ddm-growth" value="5" step="0.5"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Required Return</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="ddm-return" value="10" step="0.5"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Current Price</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="ddm-price" value="45.00"></div></div>
+</div></div>
+<div class="card"><div class="card-title">Stock Metrics</div>
+<div class="form-grid">
+<div class="form-group"><label class="form-label">Stock Price</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="stk-price" value="150.00"></div></div>
+<div class="form-group"><label class="form-label">EPS</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="stk-eps" value="6.25"></div></div>
+<div class="form-group"><label class="form-label">Book Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="stk-bv" value="45.00"></div></div>
+<div class="form-group"><label class="form-label">Industry P/E</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="stk-ind-pe" value="20" step="0.5"><span class="input-suffix">x</span></div></div>
+</div></div>
+<div class="card"><div class="card-title">Position Sizing</div>
+<div class="form-grid">
+<div class="form-group"><label class="form-label">Portfolio Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="pos-port" value="500,000"></div></div>
+<div class="form-group"><label class="form-label">Risk Per Trade</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="pos-risk" value="2" step="0.5"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Entry Price</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="pos-entry" value="50.00"></div></div>
+<div class="form-group"><label class="form-label">Stop Loss</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="pos-stop" value="45.00"></div></div>
+</div></div>
+<div class="btns"><button class="btn-primary" onclick="calcDDM()">DDM</button><button class="btn-primary" onclick="calcStock()">Metrics</button><button class="btn-primary" onclick="calcPosition()">Position</button></div>
+</div>
+
 <!-- DEBT -->
 <div class="panel" id="debt">
 <div class="panel-title"><span class="panel-icon">🏦</span>Debt Analysis</div>
-<p class="panel-desc">Loan amortization and debt coverage.</p>
+<p class="panel-desc">Loan amortization and coverage.</p>
 <div class="card premium"><div class="card-title">Loan Parameters</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Principal</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="debt-prin" value="10,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Interest Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="debt-rate" value="7.5" step=".125" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Term</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="debt-term" value="10" inputmode="numeric"><span class="input-suffix">yrs</span></div></div>
-<div class="form-group"><label class="form-label">EBITDA</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="debt-ebitda" value="3,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
+<div class="form-group"><label class="form-label">Principal</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="debt-prin" value="10,000,000"></div></div>
+<div class="form-group"><label class="form-label">Interest Rate</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="debt-rate" value="7.5" step=".125"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Term</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="debt-term" value="10"><span class="input-suffix">yrs</span></div></div>
+<div class="form-group"><label class="form-label">EBITDA</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="debt-ebitda" value="3,000,000"></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcDebt()">Analyze</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
 <!-- WORKING CAPITAL -->
 <div class="panel" id="wc">
 <div class="panel-title"><span class="panel-icon">💰</span>Working Capital</div>
-<p class="panel-desc">Cash conversion cycle and liquidity.</p>
+<p class="panel-desc">Cash conversion cycle.</p>
 <div class="card premium"><div class="card-title">Operating Metrics</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Revenue</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-rev" value="50,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">COGS</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-cogs" value="30,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">A/R</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-ar" value="6,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Inventory</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-inv" value="4,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">A/P</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-ap" value="3,500,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Cash</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-cash" value="2,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
+<div class="form-group"><label class="form-label">Revenue</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-rev" value="50,000,000"></div></div>
+<div class="form-group"><label class="form-label">COGS</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-cogs" value="30,000,000"></div></div>
+<div class="form-group"><label class="form-label">A/R</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-ar" value="6,000,000"></div></div>
+<div class="form-group"><label class="form-label">Inventory</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-inv" value="4,000,000"></div></div>
+<div class="form-group"><label class="form-label">A/P</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="wc-ap" value="3,500,000"></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcWC()">Analyze</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
 <!-- PROFITABILITY -->
 <div class="panel" id="profit">
 <div class="panel-title"><span class="panel-icon">📈</span>Profitability</div>
-<p class="panel-desc">Break-even and margin analysis.</p>
+<p class="panel-desc">Break-even analysis.</p>
 <div class="card premium"><div class="card-title">Cost Structure</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Unit Price</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="prof-price" value="150" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Var Cost/Unit</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="prof-var" value="65" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Fixed Costs</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="prof-fixed" value="2,500,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Volume</label><div class="input-wrap"><input type="text" class="form-input has-suffix" id="prof-vol" value="50,000" inputmode="numeric" oninput="fmtCur(this)"><span class="input-suffix">units</span></div></div>
+<div class="form-group"><label class="form-label">Unit Price</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="prof-price" value="150"></div></div>
+<div class="form-group"><label class="form-label">Var Cost/Unit</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="prof-var" value="65"></div></div>
+<div class="form-group"><label class="form-label">Fixed Costs</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="prof-fixed" value="2,500,000"></div></div>
+<div class="form-group"><label class="form-label">Volume</label><div class="input-wrap"><input type="text" class="form-input has-suffix" id="prof-vol" value="50,000"><span class="input-suffix">units</span></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcProfit()">Analyze</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
 <!-- GROWTH -->
 <div class="panel" id="growth">
 <div class="panel-title"><span class="panel-icon">🚀</span>Growth & Returns</div>
-<p class="panel-desc">CAGR, ROI, ROE calculations.</p>
+<p class="panel-desc">CAGR and ROI calculations.</p>
 <div class="card premium"><div class="card-title">Investment Data</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Begin Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-begin" value="10,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">End Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-end" value="18,500,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Period</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="gr-yrs" value="5" step=".5" inputmode="decimal"><span class="input-suffix">yrs</span></div></div>
-<div class="form-group"><label class="form-label">Net Income</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-ni" value="5,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Equity</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-eq" value="25,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Total Assets</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-assets" value="40,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
+<div class="form-group"><label class="form-label">Begin Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-begin" value="10,000,000"></div></div>
+<div class="form-group"><label class="form-label">End Value</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-end" value="18,500,000"></div></div>
+<div class="form-group"><label class="form-label">Period</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="gr-yrs" value="5" step=".5"><span class="input-suffix">yrs</span></div></div>
+<div class="form-group"><label class="form-label">Net Income</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-ni" value="5,000,000"></div></div>
+<div class="form-group"><label class="form-label">Equity</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-eq" value="25,000,000"></div></div>
+<div class="form-group"><label class="form-label">Total Assets</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="gr-assets" value="40,000,000"></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcGrowth()">Calculate</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
 <!-- SCENARIOS -->
 <div class="panel" id="scenario">
 <div class="panel-title"><span class="panel-icon">🎯</span>Scenario Analysis</div>
-<p class="panel-desc">Best, base, worst case comparison.</p>
+<p class="panel-desc">Best/base/worst case.</p>
 <div class="card premium"><div class="card-title">Base Case</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Investment</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="sc-inv" value="5,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Revenue</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="sc-rev" value="3,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Op Margin</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-margin" value="25" inputmode="decimal"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Discount</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-disc" value="12" inputmode="decimal"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Investment</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="sc-inv" value="5,000,000"></div></div>
+<div class="form-group"><label class="form-label">Revenue</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="sc-rev" value="3,000,000"></div></div>
+<div class="form-group"><label class="form-label">Op Margin</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-margin" value="25"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Discount</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-disc" value="12"><span class="input-suffix">%</span></div></div>
 </div></div>
 <div class="card"><div class="card-title">Variations</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Worst Rev Δ</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-worst-r" value="-20" inputmode="numeric"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Worst Marg Δ</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-worst-m" value="-5" inputmode="numeric"><span class="input-suffix">pts</span></div></div>
-<div class="form-group"><label class="form-label">Best Rev Δ</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-best-r" value="30" inputmode="numeric"><span class="input-suffix">%</span></div></div>
-<div class="form-group"><label class="form-label">Best Marg Δ</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-best-m" value="5" inputmode="numeric"><span class="input-suffix">pts</span></div></div>
+<div class="form-group"><label class="form-label">Worst Rev</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-worst-r" value="-20"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Worst Margin</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-worst-m" value="-5"><span class="input-suffix">pts</span></div></div>
+<div class="form-group"><label class="form-label">Best Rev</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-best-r" value="30"><span class="input-suffix">%</span></div></div>
+<div class="form-group"><label class="form-label">Best Margin</label><div class="input-wrap"><input type="number" class="form-input has-suffix" id="sc-best-m" value="5"><span class="input-suffix">pts</span></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcScenario()">Run</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
+
 <!-- RATIOS -->
 <div class="panel" id="ratios">
 <div class="panel-title"><span class="panel-icon">📋</span>Financial Ratios</div>
-<p class="panel-desc">Profitability, liquidity, solvency.</p>
+<p class="panel-desc">Key financial metrics.</p>
 <div class="card premium"><div class="card-title">Income Statement</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Revenue</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-rev" value="100,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Gross Profit</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-gross" value="40,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Op Income</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-op" value="15,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Net Income</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-ni" value="10,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
+<div class="form-group"><label class="form-label">Revenue</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-rev" value="100,000,000"></div></div>
+<div class="form-group"><label class="form-label">Gross Profit</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-gross" value="40,000,000"></div></div>
+<div class="form-group"><label class="form-label">Op Income</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-op" value="15,000,000"></div></div>
+<div class="form-group"><label class="form-label">Net Income</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-ni" value="10,000,000"></div></div>
 </div></div>
 <div class="card"><div class="card-title">Balance Sheet</div>
 <div class="form-grid">
-<div class="form-group"><label class="form-label">Current Assets</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-ca" value="25,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Current Liab</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-cl" value="15,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Total Assets</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-ta" value="80,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Total Liab</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-tl" value="35,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Equity</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-eq" value="45,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
-<div class="form-group"><label class="form-label">Inventory</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-inv" value="8,000,000" inputmode="numeric" oninput="fmtCur(this)"></div></div>
+<div class="form-group"><label class="form-label">Current Assets</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-ca" value="25,000,000"></div></div>
+<div class="form-group"><label class="form-label">Current Liab</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-cl" value="15,000,000"></div></div>
+<div class="form-group"><label class="form-label">Total Assets</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-ta" value="80,000,000"></div></div>
+<div class="form-group"><label class="form-label">Total Liab</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-tl" value="35,000,000"></div></div>
+<div class="form-group"><label class="form-label">Equity</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-eq" value="45,000,000"></div></div>
+<div class="form-group"><label class="form-label">Inventory</label><div class="input-wrap"><span class="input-prefix">$</span><input type="text" class="form-input has-prefix" id="rat-inv" value="8,000,000"></div></div>
 </div></div>
 <div class="btns"><button class="btn-primary" onclick="calcRatios()">Calculate</button><button class="btn-secondary" onclick="clr()">Reset</button></div>
 </div>
 </div>
-<!-- RESULTS -->
+
+<!-- RESULTS PANEL -->
 <aside class="results-panel" id="resultsPanel">
 <button class="close-results" onclick="hideResults()">×</button>
-<div class="result-card"><div class="card-title">Results</div><div id="results"><div class="empty-state"><div class="empty-icon">📊</div><div class="empty-title">Ready</div><div class="empty-text">Run a calculation to see results</div></div></div></div>
+<div class="result-card"><div class="card-title">Results</div><div id="results"><div class="empty-state"><div class="empty-icon">📊</div><div class="empty-title">Ready</div><div class="empty-text">Run a calculation</div></div></div></div>
 <div class="result-card" id="schedule-card" style="display:none"><div class="card-title">Schedule</div><div id="schedule" style="max-height:250px;overflow-y:auto"></div></div>
 <div class="result-card" id="sens-card" style="display:none"><div class="card-title">Sensitivity</div><div id="sens"></div></div>
 </aside>
@@ -317,144 +379,174 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 </div>
 <button class="view-results-btn" id="viewResultsBtn" onclick="showResults()">View Results</button>
 <div class="install-prompt" id="installPrompt">
-<div class="install-prompt-text">📱 Install APEX Finance for quick access and offline use</div>
+<div class="install-prompt-text">📱 Install Serca/40 for quick access</div>
 <div class="install-prompt-btns"><button class="install-btn" onclick="installApp()">Install</button><button class="dismiss-btn" onclick="dismissInstall()">Later</button></div>
 </div>
 <script>
-// Register Service Worker
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').then(r=>console.log('SW registered')).catch(e=>console.log('SW failed',e))}
+// Service Worker
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(e=>console.log('SW failed',e))}
 
-// Install Prompt
+// Install
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;if(!localStorage.getItem('installDismissed'))document.getElementById('installPrompt').classList.add('show')});
-function installApp(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(r=>{deferredPrompt=null;document.getElementById('installPrompt').classList.remove('show')})}}
+function installApp(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(()=>{deferredPrompt=null;document.getElementById('installPrompt').classList.remove('show')})}}
 function dismissInstall(){document.getElementById('installPrompt').classList.remove('show');localStorage.setItem('installDismissed','1')}
 
 // Utilities
-function fmtCur(i){let v=i.value.replace(/[^0-9.-]/g,'');if(v){const n=parseFloat(v);if(!isNaN(n))i.value=n.toLocaleString('en-US')}}
 function parse(s){return parseFloat(String(s).replace(/[^0-9.-]/g,''))||0}
-function fmt$(n,d=0){const a=Math.abs(n);let f;if(a>=1e9)f=(n/1e9).toFixed(2)+'B';else if(a>=1e6)f=(n/1e6).toFixed(2)+'M';else if(a>=1e3)f=(n/1e3).toFixed(1)+'K';else f=n.toFixed(d);return'$'+f}
+function fmt$(n){const a=Math.abs(n);if(a>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(a>=1e6)return'$'+(n/1e6).toFixed(2)+'M';if(a>=1e3)return'$'+(n/1e3).toFixed(1)+'K';return'$'+n.toFixed(0)}
 function fmtFull(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:0,maximumFractionDigits:0}).format(n)}
 function fmtPct(n,d=2){return n.toFixed(d)+'%'}
-function fmtNum(n,d=2){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
+function fmtNum(n,d=0){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})}
 
 // DateTime
 function upTime(){document.getElementById('datetime').textContent=new Date().toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}
 upTime();setInterval(upTime,60000);
 
-// Results visibility for mobile
+// Results
 let hasResults=false;
 function showResults(){document.getElementById('resultsPanel').classList.add('mobile-show')}
 function hideResults(){document.getElementById('resultsPanel').classList.remove('mobile-show')}
 function updateResultsBtn(){document.getElementById('viewResultsBtn').classList.toggle('show',hasResults)}
+function clr(){document.getElementById('results').innerHTML='<div class="empty-state"><div class="empty-icon">📊</div><div class="empty-title">Ready</div><div class="empty-text">Run a calculation</div></div>';document.getElementById('schedule-card').style.display='none';document.getElementById('sens-card').style.display='none';hasResults=false;updateResultsBtn()}
 
-// Nav
-document.querySelectorAll('.nav-tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.nav-tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));t.classList.add('active');document.getElementById(t.dataset.tab).classList.add('active');clr()});
+// NAVIGATION - FIXED
+document.querySelectorAll('.nav-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+        // Remove active from all tabs
+        document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active')});
+        // Remove active from all panels
+        document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});
+        // Add active to clicked tab
+        this.classList.add('active');
+        // Add active to corresponding panel
+        var panelId = this.getAttribute('data-tab');
+        document.getElementById(panelId).classList.add('active');
+        clr();
+    });
+});
 
 // CF Table
-function calcNet(i){const r=i.closest('tr'),rev=parse(r.querySelector('.cf-rev').value),cost=parse(r.querySelector('.cf-cost').value);r.querySelector('.net-cf').textContent=fmtFull(rev-cost)}
-function addRow(){const tb=document.getElementById('capex-cf'),n=tb.rows.length+1,tr=document.createElement('tr');tr.innerHTML=`<td class="cf-period">${n}</td><td><input type="text" class="cf-input cf-rev" value="0" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><input type="text" class="cf-input cf-cost" value="0" inputmode="numeric" oninput="fmtCur(this);calcNet(this)"></td><td><span class="net-cf">$0</span></td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td>`;tb.appendChild(tr)}
-function rmRow(b){const tb=document.getElementById('capex-cf');if(tb.rows.length>1){b.closest('tr').remove();[...tb.rows].forEach((r,i)=>r.querySelector('.cf-period').textContent=i+1)}}
-
-function clr(){document.getElementById('results').innerHTML='<div class="empty-state"><div class="empty-icon">📊</div><div class="empty-title">Ready</div><div class="empty-text">Run a calculation</div></div>';document.getElementById('schedule-card').style.display='none';document.getElementById('sens-card').style.display='none';hasResults=false;updateResultsBtn()}
+function calcNet(row){var rev=parse(row.querySelector('.cf-rev').value),cost=parse(row.querySelector('.cf-cost').value);row.querySelector('.net-cf').textContent=fmtFull(rev-cost)}
+function addRow(){var tb=document.getElementById('capex-cf'),n=tb.rows.length+1,tr=document.createElement('tr');tr.innerHTML='<td class="cf-period">'+n+'</td><td><input type="text" class="cf-input cf-rev" value="0"></td><td><input type="text" class="cf-input cf-cost" value="0"></td><td class="net-cf">$0</td><td><button class="btn-rm" onclick="rmRow(this)">×</button></td>';tb.appendChild(tr);setupCFListeners(tr)}
+function rmRow(b){var tb=document.getElementById('capex-cf');if(tb.rows.length>1){b.closest('tr').remove();Array.from(tb.rows).forEach(function(r,i){r.querySelector('.cf-period').textContent=i+1})}}
+function setupCFListeners(row){row.querySelectorAll('.cf-input').forEach(function(inp){inp.addEventListener('input',function(){calcNet(row)})})}
+document.querySelectorAll('#capex-cf tr').forEach(function(row){setupCFListeners(row)});
 
 // CALCULATIONS
 function calcCapex(){
-const init=parse(document.getElementById('capex-init').value),wacc=parseFloat(document.getElementById('capex-wacc').value)/100,reinv=parseFloat(document.getElementById('capex-reinv').value)/100,salv=parse(document.getElementById('capex-salv').value);
-const cfs=[-init];document.querySelectorAll('#capex-cf tr').forEach(r=>{const rev=parse(r.querySelector('.cf-rev').value),cost=parse(r.querySelector('.cf-cost').value);cfs.push(rev-cost)});cfs[cfs.length-1]+=salv;const n=cfs.length-1;
-let npv=0;for(let t=0;t<cfs.length;t++)npv+=cfs[t]/Math.pow(1+wacc,t);
-let irr=0.1;for(let i=0;i<200;i++){let f=0,df=0;for(let t=0;t<cfs.length;t++){f+=cfs[t]/Math.pow(1+irr,t);if(t>0)df-=t*cfs[t]/Math.pow(1+irr,t+1)}if(Math.abs(df)<1e-10)break;const nIrr=irr-f/df;if(Math.abs(nIrr-irr)<1e-8)break;irr=nIrr}
-let fvPos=0,pvNeg=0;for(let t=0;t<cfs.length;t++){if(cfs[t]>=0)fvPos+=cfs[t]*Math.pow(1+reinv,n-t);else pvNeg+=Math.abs(cfs[t])/Math.pow(1+wacc,t)}const mirr=Math.pow(fvPos/pvNeg,1/n)-1;
-let cum=0,pb=n;for(let t=0;t<cfs.length;t++){cum+=cfs[t];if(cum>=0&&t>0){pb=(t-1)+Math.abs(cum-cfs[t])/cfs[t];break}}
-const pi=(npv+init)/init,viable=npv>0&&irr>wacc,verd=viable?'INVEST':'REJECT',vc=viable?'pos':'neg';
-let h=`<div class="result-hero"><div class="result-hero-label">Net Present Value</div><div class="result-hero-value ${npv>=0?'pos':'neg'}">${fmt$(npv)}</div><div style="margin-top:.75rem"><span class="verdict ${vc}">${verd==='INVEST'?'✓':'✗'} ${verd}</span></div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">IRR</div><div class="result-item-value ${irr>wacc?'pos':'neg'}">${fmtPct(irr*100)}</div></div><div class="result-item"><div class="result-item-label">MIRR</div><div class="result-item-value ${mirr>wacc?'pos':'neg'}">${fmtPct(mirr*100)}</div></div><div class="result-item"><div class="result-item-label">Payback</div><div class="result-item-value">${pb.toFixed(2)} yrs</div></div><div class="result-item"><div class="result-item-label">Prof Index</div><div class="result-item-value gold">${pi.toFixed(2)}x</div></div></div>`;
-h+=`<div class="chart-area"><div class="chart-title">Cash Flows</div><div class="bar-chart">${cfs.map((cf,i)=>{const mx=Math.max(...cfs.map(Math.abs)),ht=Math.abs(cf)/mx*80;return`<div class="bar ${cf<0?'neg':''}" style="height:${ht}px"></div>`}).join('')}</div></div>`;
+var init=parse(document.getElementById('capex-init').value),wacc=parseFloat(document.getElementById('capex-wacc').value)/100,reinv=parseFloat(document.getElementById('capex-reinv').value)/100,salv=parse(document.getElementById('capex-salv').value);
+var cfs=[-init];document.querySelectorAll('#capex-cf tr').forEach(function(r){var rev=parse(r.querySelector('.cf-rev').value),cost=parse(r.querySelector('.cf-cost').value);cfs.push(rev-cost)});cfs[cfs.length-1]+=salv;var n=cfs.length-1;
+var npv=0;for(var t=0;t<cfs.length;t++)npv+=cfs[t]/Math.pow(1+wacc,t);
+var irr=0.1;for(var i=0;i<200;i++){var f=0,df=0;for(var t=0;t<cfs.length;t++){f+=cfs[t]/Math.pow(1+irr,t);if(t>0)df-=t*cfs[t]/Math.pow(1+irr,t+1)}if(Math.abs(df)<1e-10)break;var nIrr=irr-f/df;if(Math.abs(nIrr-irr)<1e-8)break;irr=nIrr}
+var fvPos=0,pvNeg=0;for(var t=0;t<cfs.length;t++){if(cfs[t]>=0)fvPos+=cfs[t]*Math.pow(1+reinv,n-t);else pvNeg+=Math.abs(cfs[t])/Math.pow(1+wacc,t)}var mirr=Math.pow(fvPos/pvNeg,1/n)-1;
+var cum=0,pb=n;for(var t=0;t<cfs.length;t++){cum+=cfs[t];if(cum>=0&&t>0){pb=(t-1)+Math.abs(cum-cfs[t])/cfs[t];break}}
+var pi=(npv+init)/init,viable=npv>0&&irr>wacc,verd=viable?'INVEST':'REJECT',vc=viable?'pos':'neg';
+var h='<div class="result-hero"><div class="result-hero-label">Net Present Value</div><div class="result-hero-value '+(npv>=0?'pos':'neg')+'">'+fmt$(npv)+'</div><div style="margin-top:.75rem"><span class="verdict '+vc+'">'+(verd==='INVEST'?'✓':'✗')+' '+verd+'</span></div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">IRR</div><div class="result-item-value '+(irr>wacc?'pos':'neg')+'">'+fmtPct(irr*100)+'</div></div><div class="result-item"><div class="result-item-label">MIRR</div><div class="result-item-value '+(mirr>wacc?'pos':'neg')+'">'+fmtPct(mirr*100)+'</div></div><div class="result-item"><div class="result-item-label">Payback</div><div class="result-item-value">'+pb.toFixed(2)+' yrs</div></div><div class="result-item"><div class="result-item-label">Prof Index</div><div class="result-item-value gold">'+pi.toFixed(2)+'x</div></div></div>';
+h+='<div class="chart-area"><div class="chart-title">Cash Flows</div><div class="bar-chart">'+cfs.map(function(cf){var mx=Math.max.apply(null,cfs.map(Math.abs)),ht=Math.abs(cf)/mx*80;return'<div class="bar '+(cf<0?'neg':'')+'" style="height:'+ht+'px"></div>'}).join('')+'</div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
-// Schedule
-let sch=`<table class="data-table"><thead><tr><th>Yr</th><th>CF</th><th>PV</th><th>Cum</th></tr></thead><tbody>`;let c=0;cfs.forEach((cf,t)=>{const dcf=cf/Math.pow(1+wacc,t);c+=dcf;sch+=`<tr><td>${t}</td><td>${fmtFull(cf)}</td><td>${fmtFull(dcf)}</td><td>${fmtFull(c)}</td></tr>`});sch+='</tbody></table>';
+var sch='<table class="data-table"><thead><tr><th>Yr</th><th>CF</th><th>PV</th><th>Cum</th></tr></thead><tbody>';var c=0;cfs.forEach(function(cf,t){var dcf=cf/Math.pow(1+wacc,t);c+=dcf;sch+='<tr><td>'+t+'</td><td>'+fmtFull(cf)+'</td><td>'+fmtFull(dcf)+'</td><td>'+fmtFull(c)+'</td></tr>'});sch+='</tbody></table>';
 document.getElementById('schedule').innerHTML=sch;document.getElementById('schedule-card').style.display='block';
-// Sensitivity
-const wvs=[-2,-1,0,1,2],rvs=[-20,-10,0,10,20];let sens=`<div class="sensitivity"><table><tr><th></th>${rvs.map(r=>`<th>${r>=0?'+':''}${r}%</th>`).join('')}</tr>`;
-wvs.forEach(w=>{const nw=wacc+w/100;sens+=`<tr><th>${fmtPct(nw*100,0)}</th>`;rvs.forEach(rv=>{const rm=1+rv/100;let npv2=0;cfs.forEach((cf,t)=>{npv2+=(t===0?cf:cf*rm)/Math.pow(1+nw,t)});const hl=w===0&&rv===0,cls=npv2>=0?'pos':'neg';sens+=`<td class="${hl?'hl':''}" style="color:var(--${cls==='pos'?'success':'danger'})">${fmt$(npv2)}</td>`});sens+='</tr>'});sens+='</table></div>';
-document.getElementById('sens').innerHTML=sens;document.getElementById('sens-card').style.display='block';
+}
+
+function calcFV(){
+var pv=parse(document.getElementById('fv-pv').value),rate=parseFloat(document.getElementById('fv-rate').value)/100,years=parseFloat(document.getElementById('fv-years').value),compound=parseInt(document.getElementById('fv-compound').value),pmt=parse(document.getElementById('fv-pmt').value);
+var periodicRate=rate/compound,totalPeriods=years*compound;
+var fvLump=pv*Math.pow(1+periodicRate,totalPeriods);
+var pmtRate=rate/12,pmtPeriods=years*12;var fvAnnuity=pmt*((Math.pow(1+pmtRate,pmtPeriods)-1)/pmtRate);
+var totalFV=fvLump+fvAnnuity,totalContrib=pv+pmt*pmtPeriods,totalInterest=totalFV-totalContrib;
+var h='<div class="result-hero"><div class="result-hero-label">Future Value</div><div class="result-hero-value gold">'+fmt$(totalFV)+'</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Initial</div><div class="result-item-value">'+fmt$(pv)+'</div></div><div class="result-item"><div class="result-item-label">Contributions</div><div class="result-item-value">'+fmt$(pmt*pmtPeriods)+'</div></div><div class="result-item"><div class="result-item-label">Interest Earned</div><div class="result-item-value pos">'+fmt$(totalInterest)+'</div></div><div class="result-item"><div class="result-item-label">Growth Multiple</div><div class="result-item-value gold">'+(totalFV/totalContrib).toFixed(2)+'x</div></div></div>';
+document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
+}
+
+function calcPV(){
+var fv=parse(document.getElementById('pv-fv').value),rate=parseFloat(document.getElementById('pv-rate').value)/100,years=parseFloat(document.getElementById('pv-years').value),compound=parseInt(document.getElementById('pv-compound').value);
+var periodicRate=rate/compound,totalPeriods=years*compound;var pv=fv/Math.pow(1+periodicRate,totalPeriods),discount=fv-pv;
+var h='<div class="result-hero"><div class="result-hero-label">Present Value</div><div class="result-hero-value gold">'+fmt$(pv)+'</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Future Value</div><div class="result-item-value">'+fmt$(fv)+'</div></div><div class="result-item"><div class="result-item-label">Discount</div><div class="result-item-value neg">'+fmt$(discount)+'</div></div><div class="result-item full"><div class="result-item-label">Discount %</div><div class="result-item-value">'+fmtPct((discount/fv)*100)+'</div></div></div>';
+document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 function calcDCF(){
-const fcf=parse(document.getElementById('dcf-fcf').value),wacc=parseFloat(document.getElementById('dcf-wacc').value)/100,tg=parseFloat(document.getElementById('dcf-tg').value)/100,yrs=parseInt(document.getElementById('dcf-yrs').value),shares=parse(document.getElementById('dcf-shares').value),debt=parse(document.getElementById('dcf-debt').value),g1=parseFloat(document.getElementById('dcf-g1').value)/100,g2=parseFloat(document.getElementById('dcf-g2').value)/100;
-let curr=fcf,pvSum=0;const proj=[];for(let t=1;t<=yrs;t++){const gr=t<=3?g1:g2;curr*=(1+gr);const pv=curr/Math.pow(1+wacc,t);pvSum+=pv;proj.push({yr:t,fcf:curr,pv})}
-const tv=curr*(1+tg)/(wacc-tg),pvTV=tv/Math.pow(1+wacc,yrs);
-const ev=pvSum+pvTV,eqVal=ev-debt,shareVal=eqVal/shares;
-let h=`<div class="result-hero"><div class="result-hero-label">Share Price</div><div class="result-hero-value gold">$${shareVal.toFixed(2)}</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Enterprise Val</div><div class="result-item-value gold">${fmt$(ev)}</div></div><div class="result-item"><div class="result-item-label">Equity Val</div><div class="result-item-value gold">${fmt$(eqVal)}</div></div><div class="result-item"><div class="result-item-label">PV of FCFs</div><div class="result-item-value">${fmt$(pvSum)}</div></div><div class="result-item"><div class="result-item-label">PV Terminal</div><div class="result-item-value">${fmt$(pvTV)}</div></div></div>`;
+var fcf=parse(document.getElementById('dcf-fcf').value),wacc=parseFloat(document.getElementById('dcf-wacc').value)/100,tg=parseFloat(document.getElementById('dcf-tg').value)/100,yrs=parseInt(document.getElementById('dcf-yrs').value),shares=parse(document.getElementById('dcf-shares').value),debt=parse(document.getElementById('dcf-debt').value),g1=parseFloat(document.getElementById('dcf-g1').value)/100,g2=parseFloat(document.getElementById('dcf-g2').value)/100;
+var curr=fcf,pvSum=0,proj=[];for(var t=1;t<=yrs;t++){var gr=t<=3?g1:g2;curr*=(1+gr);var pv=curr/Math.pow(1+wacc,t);pvSum+=pv;proj.push({yr:t,fcf:curr,pv:pv})}
+var tv=curr*(1+tg)/(wacc-tg),pvTV=tv/Math.pow(1+wacc,yrs);var ev=pvSum+pvTV,eqVal=ev-debt,shareVal=eqVal/shares;
+var h='<div class="result-hero"><div class="result-hero-label">Share Price</div><div class="result-hero-value gold">$'+shareVal.toFixed(2)+'</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Enterprise Val</div><div class="result-item-value gold">'+fmt$(ev)+'</div></div><div class="result-item"><div class="result-item-label">Equity Val</div><div class="result-item-value gold">'+fmt$(eqVal)+'</div></div><div class="result-item"><div class="result-item-label">PV of FCFs</div><div class="result-item-value">'+fmt$(pvSum)+'</div></div><div class="result-item"><div class="result-item-label">PV Terminal</div><div class="result-item-value">'+fmt$(pvTV)+'</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
-let sch=`<table class="data-table"><thead><tr><th>Yr</th><th>FCF</th><th>PV</th></tr></thead><tbody>`;proj.forEach(p=>{sch+=`<tr><td>${p.yr}</td><td>${fmtFull(p.fcf)}</td><td>${fmtFull(p.pv)}</td></tr>`});sch+=`<tr style="background:rgba(212,175,55,.1)"><td>TV</td><td>${fmtFull(tv)}</td><td>${fmtFull(pvTV)}</td></tr></tbody></table>`;
-document.getElementById('schedule').innerHTML=sch;document.getElementById('schedule-card').style.display='block';
+}
+
+function calcDDM(){
+var div=parse(document.getElementById('ddm-div').value),growth=parseFloat(document.getElementById('ddm-growth').value)/100,reqReturn=parseFloat(document.getElementById('ddm-return').value)/100,currentPrice=parse(document.getElementById('ddm-price').value);
+if(reqReturn<=growth){document.getElementById('results').innerHTML='<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Error</div><div class="empty-text">Required return must exceed growth</div></div>';return}
+var nextDiv=div*(1+growth),intrinsic=nextDiv/(reqReturn-growth),upside=((intrinsic-currentPrice)/currentPrice)*100;
+var verdict=intrinsic>currentPrice?'UNDERVALUED':intrinsic<currentPrice*0.9?'OVERVALUED':'FAIR VALUE',vc=intrinsic>currentPrice?'pos':intrinsic<currentPrice*0.9?'neg':'neutral';
+var h='<div class="result-hero"><div class="result-hero-label">Intrinsic Value</div><div class="result-hero-value gold">$'+intrinsic.toFixed(2)+'</div><div style="margin-top:.75rem"><span class="verdict '+vc+'">'+verdict+'</span></div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Current Price</div><div class="result-item-value">$'+currentPrice.toFixed(2)+'</div></div><div class="result-item"><div class="result-item-label">Upside</div><div class="result-item-value '+(upside>=0?'pos':'neg')+'">'+(upside>=0?'+':'')+fmtPct(upside)+'</div></div><div class="result-item"><div class="result-item-label">Div Yield</div><div class="result-item-value gold">'+fmtPct((div/currentPrice)*100)+'</div></div><div class="result-item"><div class="result-item-label">Next Dividend</div><div class="result-item-value">$'+nextDiv.toFixed(2)+'</div></div></div>';
+document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
+}
+
+function calcStock(){
+var price=parse(document.getElementById('stk-price').value),eps=parse(document.getElementById('stk-eps').value),bv=parse(document.getElementById('stk-bv').value),indPE=parseFloat(document.getElementById('stk-ind-pe').value);
+var pe=price/eps,pb=price/bv,fairValue=eps*indPE,upside=((fairValue-price)/price)*100;
+var verdict=pe<indPE*0.8?'CHEAP':pe>indPE*1.2?'EXPENSIVE':'FAIR',vc=pe<indPE*0.8?'pos':pe>indPE*1.2?'neg':'neutral';
+var h='<div class="result-hero"><div class="result-hero-label">P/E Ratio</div><div class="result-hero-value gold">'+pe.toFixed(2)+'x</div><div style="margin-top:.75rem"><span class="verdict '+vc+'">'+verdict+'</span></div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Price/Book</div><div class="result-item-value">'+pb.toFixed(2)+'x</div></div><div class="result-item"><div class="result-item-label">Industry P/E</div><div class="result-item-value">'+indPE.toFixed(1)+'x</div></div><div class="result-item"><div class="result-item-label">Fair Value</div><div class="result-item-value">$'+fairValue.toFixed(2)+'</div></div><div class="result-item"><div class="result-item-label">Upside</div><div class="result-item-value '+(upside>=0?'pos':'neg')+'">'+(upside>=0?'+':'')+fmtPct(upside)+'</div></div></div>';
+document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
+}
+
+function calcPosition(){
+var portfolio=parse(document.getElementById('pos-port').value),riskPct=parseFloat(document.getElementById('pos-risk').value)/100,entry=parse(document.getElementById('pos-entry').value),stop=parse(document.getElementById('pos-stop').value);
+var riskAmount=portfolio*riskPct,riskPerShare=Math.abs(entry-stop),shares=Math.floor(riskAmount/riskPerShare),positionValue=shares*entry,positionPct=(positionValue/portfolio)*100;
+var h='<div class="result-hero"><div class="result-hero-label">Position Size</div><div class="result-hero-value gold">'+shares.toLocaleString()+' shares</div><div class="result-hero-sub">'+fmt$(positionValue)+' ('+fmtPct(positionPct)+' of portfolio)</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Risk Amount</div><div class="result-item-value neg">'+fmt$(riskAmount)+'</div></div><div class="result-item"><div class="result-item-label">Risk/Share</div><div class="result-item-value">$'+riskPerShare.toFixed(2)+'</div></div><div class="result-item"><div class="result-item-label">Max Loss</div><div class="result-item-value neg">'+fmt$(shares*riskPerShare)+'</div></div><div class="result-item"><div class="result-item-label">Stop %</div><div class="result-item-value">'+fmtPct((riskPerShare/entry)*100)+'</div></div></div>';
+document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 function calcDebt(){
-const prin=parse(document.getElementById('debt-prin').value),rate=parseFloat(document.getElementById('debt-rate').value)/100,term=parseInt(document.getElementById('debt-term').value),ebitda=parse(document.getElementById('debt-ebitda').value);
-const r=rate/12,n=term*12,pmt=prin*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
-const totPmt=pmt*n,totInt=totPmt-prin;
-const annDS=pmt*12,dscr=ebitda/annDS,dte=prin/ebitda;
-const dscrC=dscr>=1.25?'pos':dscr>=1?'':'neg',dscrV=dscr>=1.25?'HEALTHY':dscr>=1?'ADEQUATE':'AT RISK';
-let h=`<div class="result-hero"><div class="result-hero-label">Monthly Payment</div><div class="result-hero-value gold">${fmtFull(pmt)}</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Total Interest</div><div class="result-item-value">${fmt$(totInt)}</div></div><div class="result-item"><div class="result-item-label">Total Cost</div><div class="result-item-value">${fmt$(totPmt)}</div></div><div class="result-item"><div class="result-item-label">DSCR</div><div class="result-item-value ${dscrC}">${dscr.toFixed(2)}x</div></div><div class="result-item"><div class="result-item-label">Debt/EBITDA</div><div class="result-item-value">${dte.toFixed(2)}x</div></div></div><div style="text-align:center;margin-top:.75rem"><span class="verdict ${dscrC}">${dscrV}</span></div>`;
+var prin=parse(document.getElementById('debt-prin').value),rate=parseFloat(document.getElementById('debt-rate').value)/100,term=parseInt(document.getElementById('debt-term').value),ebitda=parse(document.getElementById('debt-ebitda').value);
+var r=rate/12,n=term*12,pmt=prin*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);var totPmt=pmt*n,totInt=totPmt-prin,annDS=pmt*12,dscr=ebitda/annDS,dte=prin/ebitda;
+var dscrC=dscr>=1.25?'pos':dscr>=1?'':'neg',dscrV=dscr>=1.25?'HEALTHY':dscr>=1?'ADEQUATE':'AT RISK';
+var h='<div class="result-hero"><div class="result-hero-label">Monthly Payment</div><div class="result-hero-value gold">'+fmtFull(pmt)+'</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Total Interest</div><div class="result-item-value">'+fmt$(totInt)+'</div></div><div class="result-item"><div class="result-item-label">DSCR</div><div class="result-item-value '+dscrC+'">'+dscr.toFixed(2)+'x</div></div><div class="result-item"><div class="result-item-label">Debt/EBITDA</div><div class="result-item-value">'+dte.toFixed(2)+'x</div></div><div class="result-item full"><div class="result-item-label" style="text-align:center">'+dscrV+'</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
-let bal=prin;const sch=[];for(let i=1;i<=Math.min(12,n);i++){const intP=bal*r,prinP=pmt-intP;bal-=prinP;sch.push({p:i,pmt,prin:prinP,int:intP,bal:Math.max(0,bal)})}
-let tbl=`<table class="data-table"><thead><tr><th>#</th><th>Prin</th><th>Int</th><th>Bal</th></tr></thead><tbody>`;sch.forEach(s=>{tbl+=`<tr><td>${s.p}</td><td>${fmtFull(s.prin)}</td><td>${fmtFull(s.int)}</td><td>${fmtFull(s.bal)}</td></tr>`});tbl+='</tbody></table>';
-document.getElementById('schedule').innerHTML=tbl;document.getElementById('schedule-card').style.display='block';
 }
 
 function calcWC(){
-const rev=parse(document.getElementById('wc-rev').value),cogs=parse(document.getElementById('wc-cogs').value),ar=parse(document.getElementById('wc-ar').value),inv=parse(document.getElementById('wc-inv').value),ap=parse(document.getElementById('wc-ap').value),cash=parse(document.getElementById('wc-cash').value);
-const dSales=rev/365,dCOGS=cogs/365;
-const dso=ar/dSales,dio=inv/dCOGS,dpo=ap/dCOGS;
-const ccc=dso+dio-dpo;
-const nwc=ar+inv-ap,wcRatio=(ar+inv+cash)/ap;
-const cccC=ccc<30?'pos':ccc<60?'':'neg';
-let h=`<div class="result-hero"><div class="result-hero-label">Cash Conversion Cycle</div><div class="result-hero-value ${cccC}">${ccc.toFixed(0)} days</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">DSO</div><div class="result-item-value">${dso.toFixed(0)} days</div></div><div class="result-item"><div class="result-item-label">DIO</div><div class="result-item-value">${dio.toFixed(0)} days</div></div><div class="result-item"><div class="result-item-label">DPO</div><div class="result-item-value">${dpo.toFixed(0)} days</div></div><div class="result-item"><div class="result-item-label">WC Ratio</div><div class="result-item-value">${wcRatio.toFixed(2)}x</div></div><div class="result-item full"><div class="result-item-label">Net Working Capital</div><div class="result-item-value gold">${fmt$(nwc)}</div></div></div>`;
+var rev=parse(document.getElementById('wc-rev').value),cogs=parse(document.getElementById('wc-cogs').value),ar=parse(document.getElementById('wc-ar').value),inv=parse(document.getElementById('wc-inv').value),ap=parse(document.getElementById('wc-ap').value);
+var dSales=rev/365,dCOGS=cogs/365,dso=ar/dSales,dio=inv/dCOGS,dpo=ap/dCOGS,ccc=dso+dio-dpo,nwc=ar+inv-ap;
+var cccC=ccc<30?'pos':ccc<60?'':'neg';
+var h='<div class="result-hero"><div class="result-hero-label">Cash Conversion Cycle</div><div class="result-hero-value '+cccC+'">'+ccc.toFixed(0)+' days</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">DSO</div><div class="result-item-value">'+dso.toFixed(0)+' days</div></div><div class="result-item"><div class="result-item-label">DIO</div><div class="result-item-value">'+dio.toFixed(0)+' days</div></div><div class="result-item"><div class="result-item-label">DPO</div><div class="result-item-value">'+dpo.toFixed(0)+' days</div></div><div class="result-item"><div class="result-item-label">Net WC</div><div class="result-item-value gold">'+fmt$(nwc)+'</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 function calcProfit(){
-const price=parse(document.getElementById('prof-price').value),variable=parse(document.getElementById('prof-var').value),fixed=parse(document.getElementById('prof-fixed').value),vol=parse(document.getElementById('prof-vol').value);
-const cm=price-variable,cmRatio=cm/price;
-const beUnits=fixed/cm,beRev=beUnits*price;
-const opProfit=vol*cm-fixed;
-const mos=((vol-beUnits)/vol)*100;
-const mosC=mos>25?'pos':mos>10?'':'neg';
-let h=`<div class="result-hero"><div class="result-hero-label">Break-Even</div><div class="result-hero-value gold">${fmtNum(Math.ceil(beUnits),0)} units</div><div style="font-size:.75rem;color:var(--text2);margin-top:.25rem">${fmt$(beRev)}</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">CM/Unit</div><div class="result-item-value gold">${fmtFull(cm)}</div></div><div class="result-item"><div class="result-item-label">CM Ratio</div><div class="result-item-value">${fmtPct(cmRatio*100)}</div></div><div class="result-item"><div class="result-item-label">Op Profit</div><div class="result-item-value ${opProfit>=0?'pos':'neg'}">${fmt$(opProfit)}</div></div><div class="result-item"><div class="result-item-label">Safety Margin</div><div class="result-item-value ${mosC}">${fmtPct(mos)}</div></div></div>`;
+var price=parse(document.getElementById('prof-price').value),variable=parse(document.getElementById('prof-var').value),fixed=parse(document.getElementById('prof-fixed').value),vol=parse(document.getElementById('prof-vol').value);
+var cm=price-variable,cmRatio=cm/price,beUnits=fixed/cm,beRev=beUnits*price,opProfit=vol*cm-fixed,mos=((vol-beUnits)/vol)*100;
+var mosC=mos>25?'pos':mos>10?'':'neg';
+var h='<div class="result-hero"><div class="result-hero-label">Break-Even</div><div class="result-hero-value gold">'+fmtNum(Math.ceil(beUnits))+' units</div><div class="result-hero-sub">'+fmt$(beRev)+'</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">CM/Unit</div><div class="result-item-value gold">'+fmtFull(cm)+'</div></div><div class="result-item"><div class="result-item-label">CM Ratio</div><div class="result-item-value">'+fmtPct(cmRatio*100)+'</div></div><div class="result-item"><div class="result-item-label">Op Profit</div><div class="result-item-value '+(opProfit>=0?'pos':'neg')+'">'+fmt$(opProfit)+'</div></div><div class="result-item"><div class="result-item-label">Safety</div><div class="result-item-value '+mosC+'">'+fmtPct(mos)+'</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 function calcGrowth(){
-const begin=parse(document.getElementById('gr-begin').value),end=parse(document.getElementById('gr-end').value),yrs=parseFloat(document.getElementById('gr-yrs').value),ni=parse(document.getElementById('gr-ni').value),eq=parse(document.getElementById('gr-eq').value),assets=parse(document.getElementById('gr-assets').value);
-const roi=((end-begin)/begin)*100,cagr=(Math.pow(end/begin,1/yrs)-1)*100;
-const roe=(ni/eq)*100,roa=(ni/assets)*100;
-const dbl=cagr>0?72/cagr:Infinity,mult=end/begin;
-let h=`<div class="result-hero"><div class="result-hero-label">CAGR</div><div class="result-hero-value ${cagr>=0?'pos':'neg'}">${fmtPct(cagr)}</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Total ROI</div><div class="result-item-value ${roi>=0?'pos':'neg'}">${fmtPct(roi)}</div></div><div class="result-item"><div class="result-item-label">Multiple</div><div class="result-item-value gold">${mult.toFixed(2)}x</div></div><div class="result-item"><div class="result-item-label">ROE</div><div class="result-item-value gold">${fmtPct(roe)}</div></div><div class="result-item"><div class="result-item-label">ROA</div><div class="result-item-value">${fmtPct(roa)}</div></div><div class="result-item full"><div class="result-item-label">Doubling Time</div><div class="result-item-value">${dbl<Infinity?dbl.toFixed(1)+' yrs':'N/A'}</div></div></div>`;
+var begin=parse(document.getElementById('gr-begin').value),end=parse(document.getElementById('gr-end').value),yrs=parseFloat(document.getElementById('gr-yrs').value),ni=parse(document.getElementById('gr-ni').value),eq=parse(document.getElementById('gr-eq').value),assets=parse(document.getElementById('gr-assets').value);
+var roi=((end-begin)/begin)*100,cagr=(Math.pow(end/begin,1/yrs)-1)*100,roe=(ni/eq)*100,roa=(ni/assets)*100,dbl=cagr>0?72/cagr:Infinity,mult=end/begin;
+var h='<div class="result-hero"><div class="result-hero-label">CAGR</div><div class="result-hero-value '+(cagr>=0?'pos':'neg')+'">'+fmtPct(cagr)+'</div></div><div class="results-divider"></div><div class="results-grid"><div class="result-item"><div class="result-item-label">Total ROI</div><div class="result-item-value '+(roi>=0?'pos':'neg')+'">'+fmtPct(roi)+'</div></div><div class="result-item"><div class="result-item-label">Multiple</div><div class="result-item-value gold">'+mult.toFixed(2)+'x</div></div><div class="result-item"><div class="result-item-label">ROE</div><div class="result-item-value gold">'+fmtPct(roe)+'</div></div><div class="result-item"><div class="result-item-label">ROA</div><div class="result-item-value">'+fmtPct(roa)+'</div></div><div class="result-item full"><div class="result-item-label">Doubling Time</div><div class="result-item-value">'+(dbl<Infinity?dbl.toFixed(1)+' yrs':'N/A')+'</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 function calcScenario(){
-const inv=parse(document.getElementById('sc-inv').value),baseRev=parse(document.getElementById('sc-rev').value),baseMarg=parseFloat(document.getElementById('sc-margin').value)/100,disc=parseFloat(document.getElementById('sc-disc').value)/100;
-const wR=parseFloat(document.getElementById('sc-worst-r').value)/100,wM=parseFloat(document.getElementById('sc-worst-m').value)/100,bR=parseFloat(document.getElementById('sc-best-r').value)/100,bM=parseFloat(document.getElementById('sc-best-m').value)/100;
-function calcNPV(revM,margD){const cf=baseRev*(1+revM)*(baseMarg+margD);let npv=-inv;for(let t=1;t<=5;t++)npv+=cf/Math.pow(1+disc,t);return npv}
-const worst=calcNPV(wR,wM),base=calcNPV(0,0),best=calcNPV(bR,bM);
-const exp=worst*.25+base*.5+best*.25;
-let h=`<div class="result-hero"><div class="result-hero-label">Expected NPV</div><div class="result-hero-value ${exp>=0?'pos':'neg'}">${fmt$(exp)}</div></div><div class="results-divider"></div><div style="display:grid;gap:.5rem"><div class="result-item" style="background:rgba(255,23,68,.1);border-color:rgba(255,23,68,.2)"><div class="result-item-label" style="color:var(--danger)">Worst</div><div class="result-item-value neg">${fmt$(worst)}</div></div><div class="result-item" style="background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3)"><div class="result-item-label" style="color:var(--gold)">Base</div><div class="result-item-value gold">${fmt$(base)}</div></div><div class="result-item" style="background:rgba(0,200,83,.1);border-color:rgba(0,200,83,.2)"><div class="result-item-label" style="color:var(--success)">Best</div><div class="result-item-value pos">${fmt$(best)}</div></div></div>`;
+var inv=parse(document.getElementById('sc-inv').value),baseRev=parse(document.getElementById('sc-rev').value),baseMarg=parseFloat(document.getElementById('sc-margin').value)/100,disc=parseFloat(document.getElementById('sc-disc').value)/100;
+var wR=parseFloat(document.getElementById('sc-worst-r').value)/100,wM=parseFloat(document.getElementById('sc-worst-m').value)/100,bR=parseFloat(document.getElementById('sc-best-r').value)/100,bM=parseFloat(document.getElementById('sc-best-m').value)/100;
+function calcNPV(revM,margD){var cf=baseRev*(1+revM)*(baseMarg+margD);var npv=-inv;for(var t=1;t<=5;t++)npv+=cf/Math.pow(1+disc,t);return npv}
+var worst=calcNPV(wR,wM),base=calcNPV(0,0),best=calcNPV(bR,bM),exp=worst*.25+base*.5+best*.25;
+var h='<div class="result-hero"><div class="result-hero-label">Expected NPV</div><div class="result-hero-value '+(exp>=0?'pos':'neg')+'">'+fmt$(exp)+'</div></div><div class="results-divider"></div><div style="display:grid;gap:.5rem"><div class="result-item" style="background:rgba(255,23,68,.1);border-color:rgba(255,23,68,.2)"><div class="result-item-label" style="color:var(--danger)">Worst</div><div class="result-item-value neg">'+fmt$(worst)+'</div></div><div class="result-item" style="background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.3)"><div class="result-item-label" style="color:var(--gold)">Base</div><div class="result-item-value gold">'+fmt$(base)+'</div></div><div class="result-item" style="background:rgba(0,200,83,.1);border-color:rgba(0,200,83,.2)"><div class="result-item-label" style="color:var(--success)">Best</div><div class="result-item-value pos">'+fmt$(best)+'</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 function calcRatios(){
-const rev=parse(document.getElementById('rat-rev').value),gross=parse(document.getElementById('rat-gross').value),op=parse(document.getElementById('rat-op').value),ni=parse(document.getElementById('rat-ni').value),ca=parse(document.getElementById('rat-ca').value),cl=parse(document.getElementById('rat-cl').value),ta=parse(document.getElementById('rat-ta').value),tl=parse(document.getElementById('rat-tl').value),eq=parse(document.getElementById('rat-eq').value),inv=parse(document.getElementById('rat-inv').value);
-const grossM=(gross/rev)*100,opM=(op/rev)*100,netM=(ni/rev)*100,roe=(ni/eq)*100;
-const curr=ca/cl,quick=(ca-inv)/cl;
-const dte=tl/eq;
-let h=`<div style="font-size:.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem">Profitability</div><div class="results-grid" style="margin-bottom:.75rem"><div class="result-item"><div class="result-item-label">Gross</div><div class="result-item-value">${fmtPct(grossM)}</div></div><div class="result-item"><div class="result-item-label">Operating</div><div class="result-item-value">${fmtPct(opM)}</div></div><div class="result-item"><div class="result-item-label">Net</div><div class="result-item-value gold">${fmtPct(netM)}</div></div><div class="result-item"><div class="result-item-label">ROE</div><div class="result-item-value gold">${fmtPct(roe)}</div></div></div><div style="font-size:.65rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem">Liquidity & Solvency</div><div class="results-grid"><div class="result-item"><div class="result-item-label">Current</div><div class="result-item-value ${curr>=1.5?'pos':''}">${curr.toFixed(2)}x</div></div><div class="result-item"><div class="result-item-label">Quick</div><div class="result-item-value ${quick>=1?'pos':''}">${quick.toFixed(2)}x</div></div><div class="result-item full"><div class="result-item-label">Debt/Equity</div><div class="result-item-value">${dte.toFixed(2)}x</div></div></div>`;
+var rev=parse(document.getElementById('rat-rev').value),gross=parse(document.getElementById('rat-gross').value),op=parse(document.getElementById('rat-op').value),ni=parse(document.getElementById('rat-ni').value),ca=parse(document.getElementById('rat-ca').value),cl=parse(document.getElementById('rat-cl').value),ta=parse(document.getElementById('rat-ta').value),tl=parse(document.getElementById('rat-tl').value),eq=parse(document.getElementById('rat-eq').value),inv=parse(document.getElementById('rat-inv').value);
+var grossM=(gross/rev)*100,opM=(op/rev)*100,netM=(ni/rev)*100,roe=(ni/eq)*100,curr=ca/cl,quick=(ca-inv)/cl,dte=tl/eq;
+var h='<div style="font-size:.65rem;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem">Profitability</div><div class="results-grid" style="margin-bottom:.75rem"><div class="result-item"><div class="result-item-label">Gross</div><div class="result-item-value">'+fmtPct(grossM)+'</div></div><div class="result-item"><div class="result-item-label">Operating</div><div class="result-item-value">'+fmtPct(opM)+'</div></div><div class="result-item"><div class="result-item-label">Net</div><div class="result-item-value gold">'+fmtPct(netM)+'</div></div><div class="result-item"><div class="result-item-label">ROE</div><div class="result-item-value gold">'+fmtPct(roe)+'</div></div></div><div style="font-size:.65rem;color:var(--gold);text-transform:uppercase;margin-bottom:.5rem">Liquidity</div><div class="results-grid"><div class="result-item"><div class="result-item-label">Current</div><div class="result-item-value '+(curr>=1.5?'pos':'')+'">'+curr.toFixed(2)+'x</div></div><div class="result-item"><div class="result-item-label">Quick</div><div class="result-item-value '+(quick>=1?'pos':'')+'">'+quick.toFixed(2)+'x</div></div><div class="result-item full"><div class="result-item-label">Debt/Equity</div><div class="result-item-value">'+dte.toFixed(2)+'x</div></div></div>';
 document.getElementById('results').innerHTML=h;hasResults=true;updateResultsBtn();
 }
 
 // Init
-setTimeout(()=>{document.querySelectorAll('#capex-cf tr').forEach(r=>calcNet(r.querySelector('.cf-rev')));calcCapex()},100);
+setTimeout(function(){document.querySelectorAll('#capex-cf tr').forEach(function(r){calcNet(r)});calcCapex()},100);
 </script>
 </body>
 </html>
