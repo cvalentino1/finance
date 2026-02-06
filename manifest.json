@@ -1,26 +1,43 @@
 {
-  "name": "Serca/40 Financial - Quantum Intelligence Suite",
-  "short_name": "Serca/40",
-  "description": "Elite financial intelligence platform for capital analysis, stock valuation, and strategic decision-making.",
-  "start_url": "./index.html",
+  "name": "Quantum Finance — Master Dashboard",
+  "short_name": "QuantumFin",
+  "description": "24 interactive financial engines — NPV, Black-Scholes, Monte Carlo, CAPM, and more.",
+  "start_url": "./quantum-finance.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#d4af37",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4A934",
   "orientation": "any",
-  "icons": [
-    {"src": "icons/icon-72.png", "sizes": "72x72", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-96.png", "sizes": "96x96", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-152.png", "sizes": "152x152", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-384.png", "sizes": "384x384", "type": "image/png", "purpose": "any maskable"},
-    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
-  ],
   "categories": ["finance", "business", "productivity"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
   "shortcuts": [
-    {"name": "NPV/IRR Analysis", "short_name": "NPV", "url": "./index.html#capex"},
-    {"name": "Stock Valuation", "short_name": "Stocks", "url": "./index.html#stock"},
-    {"name": "Time Value", "short_name": "FV/PV", "url": "./index.html#fvpv"}
+    {
+      "name": "Valuation Tools",
+      "short_name": "Valuation",
+      "url": "./quantum-finance.html#valuation"
+    },
+    {
+      "name": "Options Pricing",
+      "short_name": "Options",
+      "url": "./quantum-finance.html#derivatives"
+    },
+    {
+      "name": "Monte Carlo Sim",
+      "short_name": "Monte Carlo",
+      "url": "./quantum-finance.html#simulation"
+    }
   ]
 }
